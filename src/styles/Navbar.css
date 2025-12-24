@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url("assets/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.navbar-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00e5ff;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 6px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #00e5ff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00e5ff;
+}
+
+
+.nav-btn {
+    background-color: #00e5ff;
+    color: black;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 12px;
+    }
+}

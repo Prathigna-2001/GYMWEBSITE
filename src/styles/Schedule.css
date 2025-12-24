@@ -1,0 +1,120 @@
+.schedule {
+    padding: 80px 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    animation: fadeIn 1.2s ease;
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    animation: slideDown 1s ease;
+}
+
+.schedule-subtitle {
+    text-align: center;
+    margin: 10px 0 60px;
+    color: #ddd;
+}
+
+.day-section {
+    margin-bottom: 70px;
+    animation: fadeUp 1s ease;
+}
+
+.day-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #00ffcc;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.schedule-card {
+    position: relative;
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.schedule-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #00ffcc, #7f00ff);
+    pointer-events: none;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.schedule-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 255, 204, .5);
+}
+
+.time {
+    display: block;
+    color: #ffdf6c;
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+    .schedule-title {
+        font-size: 2.3rem
+    }
+
+    .day-title {
+        font-size: 1.8rem
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    to {
+        opacity: 1
+    }
+}

@@ -1,0 +1,105 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://media.istockphoto.com/id/1183038884/photo/view-of-a-row-of-treadmills-in-a-gym-with-people.jpg?s=2048x2048&w=is&k=20&c=tMbN2i6GP8DME83J6NvyN0cAPVg799xpIVdoRUHTI4A=");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    background-color: #111;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s ease;
+}
+
+.login-title {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.login-form input::placeholder {
+    color: #aaa;
+}
+
+.login-form input:hover {
+    border-color: orange;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: orangered;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: orange;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: orangered;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.signup-text .link {
+    color: orange;
+    cursor: pointer;
+}
+
+.signup-text .link:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 25px;
+    }
+}

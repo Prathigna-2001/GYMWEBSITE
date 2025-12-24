@@ -1,0 +1,104 @@
+.programs {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #222;
+    animation: fadeDown 1s ease;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.program-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeUp 0.8s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.program-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover img {
+    transform: scale(1.05);
+}
+
+.program-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.program-content h3 {
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.program-content p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+}
+
+.program-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.program-btn:hover {
+    background-color: #3730a3;
+    transform: scale(1.05);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
